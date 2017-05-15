@@ -82,6 +82,9 @@
                                 <rect key="frame" x="289" y="28" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="O42-0v-aNo"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzX-Np-ZEB">
                                 <rect key="frame" x="139" y="141" width="97" height="30"/>
@@ -305,6 +308,9 @@
                                 <rect key="frame" x="319" y="28" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Tnf-he-afZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t4-2f-ZOW">
                                 <rect key="frame" x="191" y="168" width="83" height="21"/>
@@ -352,6 +358,9 @@
                                 <rect key="frame" x="127" y="333" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Retour conenxion"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="obN-Jj-n0I"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Identifiant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKK-0c-qES">
                                 <rect key="frame" x="164" y="177" width="77" height="21"/>
@@ -376,4 +385,7 @@
             <point key="canvasLocation" x="1724" y="769.56521739130437"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="obN-Jj-n0I"/>
+    </inferredMetricsTieBreakers>
 </document>
