@@ -17,6 +17,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
        
+        touchID()
+        
+        
+    }
+    
+    func touchID(){
         if #available(iOS 9.0, *) {
             //A partir de iOS 9
             
@@ -29,25 +35,21 @@ class ViewController: UIViewController {
                     if success {
                         //Empreinte OK
                         self.infoLabel.text = "empreinte OK"
-                                            } else {
+                    } else {
                         //L'utilisateur à annulé ou choisi de rentrer un mot de passe à la place
-                    self.infoLabel.text = "empreinte NOK"
+                        self.infoLabel.text = "empreinte NOK"
+                        self.touchID()
                     }
                     
                 })
             } else {
                 //Si il n'y a pas pas de lecteur d'empreinte digitale
                 self.infoLabel.text = "PAS DE CAPTEUR"
-                            }
+            }
         } else {
             //Si on est dans iOS inférieur à la version 9.0
             self.infoLabel.text = "PAS DE GESTION DE L'EMPREINTE DIGITAL"
-                    }
-        
-        
-    }
-    
-   
+        }    }
     
     //Optionel, juste pour mettre des message personalisés, traduisez-les :)
     func getInfoAvecCode(code: Int) -> String {
