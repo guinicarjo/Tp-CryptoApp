@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D01C5AB1EC9D90400D4F937 /* CompteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01C5AA1EC9D90400D4F937 /* CompteViewController.swift */; };
 		7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */; };
 		7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F21EC9ADCC00F75CAB /* ViewController.swift */; };
 		7DE770F61EC9ADCC00F75CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE770F41EC9ADCC00F75CAB /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D01C5AA1EC9D90400D4F937 /* CompteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompteViewController.swift; sourceTree = "<group>"; };
 		7DE770ED1EC9ADCC00F75CAB /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE770F21EC9ADCC00F75CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7DE770FC1EC9ADCC00F75CAB /* LaunchScreen.storyboard */,
 				7DE770FF1EC9ADCC00F75CAB /* Info.plist */,
 				7DE770F71EC9ADCC00F75CAB /* CryptoApp.xcdatamodeld */,
+				7D01C5AA1EC9D90400D4F937 /* CompteViewController.swift */,
 			);
 			path = CryptoApp;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D01C5AB1EC9D90400D4F937 /* CompteViewController.swift in Sources */,
 				7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */,
 				7DE770F91EC9ADCC00F75CAB /* CryptoApp.xcdatamodeld in Sources */,
 				7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */,
@@ -509,6 +513,7 @@
 				7DE7711A1EC9ADCC00F75CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE7711B1EC9ADCC00F75CAB /* Build configuration list for PBXNativeTarget "CryptoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				7DE7711D1EC9ADCC00F75CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE7711E1EC9ADCC00F75CAB /* Build configuration list for PBXNativeTarget "CryptoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				7DE771201EC9ADCC00F75CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
