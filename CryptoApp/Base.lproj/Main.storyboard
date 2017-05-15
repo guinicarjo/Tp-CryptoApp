@@ -53,6 +53,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnConnexion" destination="oBh-jS-PUv" id="DGM-u7-hci"/>
+                        <outlet property="btnInscription" destination="dbU-n1-EvV" id="KdO-j5-5gr"/>
                         <outlet property="infoLabel" destination="dfC-VR-yga" id="hnu-HL-cTB"/>
                     </connections>
                 </viewController>

@@ -12,10 +12,14 @@ import LocalAuthentication
 class ViewController: UIViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var btnInscription: UIButton!
+    @IBOutlet weak var btnConnexion: UIButton!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        btnConnexion.isHidden = true
+        btnInscription.isHidden = true
        
         touchID()
         
@@ -35,6 +39,8 @@ class ViewController: UIViewController {
                     if success {
                         //Empreinte OK
                         self.infoLabel.text = "empreinte OK"
+                        self.btnConnexion.isHidden = false
+                        self.btnInscription.isHidden = false
                     } else {
                         //L'utilisateur à annulé ou choisi de rentrer un mot de passe à la place
                         self.infoLabel.text = "empreinte NOK"
@@ -45,11 +51,13 @@ class ViewController: UIViewController {
             } else {
                 //Si il n'y a pas pas de lecteur d'empreinte digitale
                 self.infoLabel.text = "PAS DE CAPTEUR"
-            }
+                btnConnexion.isHidden = false
+                btnInscription.isHidden = false            }
         } else {
             //Si on est dans iOS inférieur à la version 9.0
             self.infoLabel.text = "PAS DE GESTION DE L'EMPREINTE DIGITAL"
-        }    }
+            btnConnexion.isHidden = false
+            btnInscription.isHidden = false        }    }
     
     //Optionel, juste pour mettre des message personalisés, traduisez-les :)
     func getInfoAvecCode(code: Int) -> String {
