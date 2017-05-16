@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         btnInscription.isHidden = true
        
         touchID()
-        APIRequest()         
+        APIRequest()
+
     }
     
     func touchID(){
@@ -119,7 +120,7 @@ class ViewController: UIViewController {
             }
             
             let responseAPI = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("responseString = \(responseAPI)") // Affiche dans la console la réponse de l'API
+            //print("responseString = \(responseAPI)") // Affiche dans la console la réponse de l'API
             
             if error == nil {
                 // Ce que vous voulez faire.

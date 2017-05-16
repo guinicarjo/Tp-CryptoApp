@@ -27,7 +27,18 @@ class RegisterController: UIViewController {
     @IBAction func btnRegister(_ sender: UIButton) {
         if ( password.text == password_confirmation.text){
             if(password.text != nil){
-                print("\(String(describing: password.text))")
+                //print("\(String(describing: password.text))")
+                
+                // Generate key pair
+                AsymmetricCryptoManager.sharedInstance.createSecureKeyPair({ (success, error) -> Void in
+                    if success {
+                        print("RSA-2048 keypair successfully generated.")
+                        let publicKey = AsymmetricCryptoManager.sharedInstance.getPublicKeyReference();
+                        print(publicKey!)
+                    } else {
+                        print("An error happened while generating a keypair: \(error)")
+                    }
+                })
             }
         }
     }
