@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */; };
-
-		7DAA1A491ECC3E30008CBB01 /* CreateMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */; };
-		7DE5FBB31ECB2B68004DFD63 /* AsymmetricCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */; };
 		7D4CADBD1ECC3E6B00469A73 /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */; };
 		7D4CADBF1ECC660100469A73 /* IDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBE1ECC660100469A73 /* IDController.swift */; };
+		7DAA1A491ECC3E30008CBB01 /* CreateMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */; };
+		7DE5FBB31ECB2B68004DFD63 /* AsymmetricCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */; };
 		7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */; };
 		7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F21EC9ADCC00F75CAB /* ViewController.swift */; };
 		7DE770F61EC9ADCC00F75CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE770F41EC9ADCC00F75CAB /* Main.storyboard */; };
@@ -42,11 +41,11 @@
 
 /* Begin PBXFileReference section */
 		7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
+		7D4CADBE1ECC660100469A73 /* IDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDController.swift; sourceTree = "<group>"; };
 		7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageController.swift; sourceTree = "<group>"; };
 		7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsymmetricCryptoManager.swift; sourceTree = "<group>"; };
 		7DE5FBB41ECB2B95004DFD63 /* CryptoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
-		7D4CADBE1ECC660100469A73 /* IDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDController.swift; sourceTree = "<group>"; };
 		7DE770ED1EC9ADCC00F75CAB /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE770F21EC9ADCC00F75CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,7 +213,7 @@
 				TargetAttributes = {
 					7DE770EC1EC9ADCC00F75CAB = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 75UWW54V2N;
+						DevelopmentTeam = NMQM9E974L;
 						ProvisioningStyle = Automatic;
 					};
 					7DE771031EC9ADCC00F75CAB = {
@@ -440,10 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 75UWW54V2N;
+				DEVELOPMENT_TEAM = NMQM9E974L;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = guinicarjo.CryptoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "CryptoApp/CryptoApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -454,10 +453,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 75UWW54V2N;
+				DEVELOPMENT_TEAM = NMQM9E974L;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = guinicarjo.CryptoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = CryptoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "CryptoApp/CryptoApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
