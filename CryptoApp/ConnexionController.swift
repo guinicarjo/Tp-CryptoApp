@@ -1,21 +1,24 @@
 //
-//  RegisterController.swift
+//  ConnexionController.swift
 //  CryptoApp
 //
-//  Created by stagiaire on 16/05/2017.
+//  Created by stagiaire on 17/05/2017.
 //  Copyright © 2017 guinicarji. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class RegisterController: UIViewController {
+class ConnexionController: UIViewController {
+    @IBOutlet weak var nameLabel: UITextField!
     let userDefaults = UserDefaults.standard
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var btn_register: UIButton!
-    @IBOutlet weak var password_confirmation: UITextField!
+    @IBAction func btnLoging(_ sender: UIButton) {
+APIRequest()
+
+    }
+    @IBOutlet weak var mdpLabel: UITextField!
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -25,21 +28,10 @@ class RegisterController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func btnRegister(_ sender: UIButton) {
-        if ( password.text == password_confirmation.text){
-            if(password.text != nil){
-                print("\(String(describing: password.text))")
-                APIRequest()
-            }
-        }
-    }
-    
-    
     func APIRequest() {
+     
         
-        
-        let todosEndpoint: String = "http://192.168.33.10:8080/api/signup"
+        let todosEndpoint: String = "http://192.168.33.10:8080/api/authenticate"
         
         guard let todosURL = URL(string: todosEndpoint) else {
             print("Error: cannot create URL")
@@ -47,10 +39,10 @@ class RegisterController: UIViewController {
         }
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
-        let postString = "password=\(self.password.text!)"
-        
+        let postString = "name=\(self.nameLabel.text!)&password=\(self.mdpLabel.text!)"
+        print("\(postString)")
         todosUrlRequest.httpBody = postString.data(using: .utf8)
-        
+       
         
         let session = URLSession.shared
         
@@ -75,21 +67,12 @@ class RegisterController: UIViewController {
                 }
                 print("The todo is: " + receivedTodo.description)
                 
-                guard let name = receivedTodo["name"] as? String else {
+                guard let token = receivedTodo["token"] as? String else {
                     print("Could not get token as string from JSON")
                     return
                 }
-                guard let success = receivedTodo["success"] as? Bool else {
-                    print("Could not get success as bool from JSON")
-                    return
-                }
-                self.userDefaults.set("\(name)", forKey: "name")
-               self.userDefaults.set("\(success)", forKey: "success")
-                
-                print("\(name)")
-                print("\(self.userDefaults.value(forKey: "success"))")
-            
-
+                self.userDefaults.set("\(token)", forKey: "token")
+                print("The token is: \(token)")
             } catch  {
                 print("error parsing response from POST on /todos")
                 return
@@ -97,7 +80,6 @@ class RegisterController: UIViewController {
         }
         task.resume()
     }
-
 
     /*
     // MARK: - Navigation

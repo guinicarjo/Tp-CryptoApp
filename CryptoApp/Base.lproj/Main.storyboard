@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="76" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--Connexion Controller-->
         <scene sceneID="Dng-Ym-Fwa">
             <objects>
-                <viewController id="YNT-Wz-vwV" sceneMemberID="viewController">
+                <viewController id="YNT-Wz-vwV" customClass="ConnexionController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o4H-2M-Yfm"/>
                         <viewControllerLayoutGuide type="bottom" id="Lxf-Rn-YfF"/>
@@ -107,10 +107,17 @@
                                 <rect key="frame" x="172" y="297" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="btnLoging:" destination="YNT-Wz-vwV" eventType="touchUpInside" id="2H2-VL-Y0u"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mdpLabel" destination="E6x-CD-60Z" id="vzH-J7-ujs"/>
+                        <outlet property="nameLabel" destination="kzX-Np-ZEB" id="ond-Cu-D4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkC-We-P19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,9 +342,7 @@
                                 <state key="normal" title="OK"/>
                                 <connections>
                                     <action selector="btnRegister:" destination="zSj-xq-5d4" eventType="touchUpInside" id="Kzd-aP-iPh"/>
-                                    <segue destination="BgB-dD-F1R" kind="popoverPresentation" popoverAnchorView="8qo-la-bBJ" id="s2Z-YL-RPU">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="BgB-dD-F1R" kind="show" id="s9N-Fw-aBw"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="confirm mot de passe" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-7E-K3f">
@@ -360,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="772.26386806596713"/>
         </scene>
-        <!--View Controller-->
+        <!--Controller-->
         <scene sceneID="X98-Gi-arY">
             <objects>
-                <viewController id="BgB-dD-F1R" sceneMemberID="viewController">
+                <viewController id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dd4-5b-OjH"/>
                         <viewControllerLayoutGuide type="bottom" id="SjS-Ae-SFC"/>
@@ -380,23 +385,34 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="obN-Jj-n0I"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Identifiant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKK-0c-qES">
-                                <rect key="frame" x="164" y="177" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifiant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKK-0c-qES">
+                                <rect key="frame" x="26" y="100" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9a-ta-iak">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9a-ta-iak">
                                 <rect key="frame" x="166" y="246" width="17" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M9a-ta-iak" firstAttribute="top" secondItem="iKK-0c-qES" secondAttribute="bottom" constant="80" id="2KS-VE-RKu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M9a-ta-iak" secondAttribute="trailing" constant="10" id="XP7-CD-i3L"/>
+                            <constraint firstItem="M9a-ta-iak" firstAttribute="leading" secondItem="43Z-9K-SiN" secondAttribute="leadingMargin" constant="10" id="bV9-M1-EfB"/>
+                            <constraint firstItem="iKK-0c-qES" firstAttribute="top" secondItem="dd4-5b-OjH" secondAttribute="bottom" constant="80" id="baZ-ja-PNA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iKK-0c-qES" secondAttribute="trailing" constant="10" id="i6M-ac-F96"/>
+                            <constraint firstItem="iKK-0c-qES" firstAttribute="leading" secondItem="43Z-9K-SiN" secondAttribute="leadingMargin" constant="10" id="kRC-gV-Ssq"/>
+                            <constraint firstItem="M9a-ta-iak" firstAttribute="leading" secondItem="43Z-9K-SiN" secondAttribute="leadingMargin" constant="10" id="oAP-dy-Uaj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M9a-ta-iak" secondAttribute="trailing" constant="10" id="u4M-CO-h3l"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idLabel" destination="M9a-ta-iak" id="mxM-oa-xSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lN8-Fj-MP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

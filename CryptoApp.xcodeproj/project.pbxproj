@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */; };
+		7D4CADBD1ECC3E6B00469A73 /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */; };
+		7D4CADBF1ECC660100469A73 /* IDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBE1ECC660100469A73 /* IDController.swift */; };
 		7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */; };
 		7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F21EC9ADCC00F75CAB /* ViewController.swift */; };
 		7DE770F61EC9ADCC00F75CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE770F41EC9ADCC00F75CAB /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
+		7D4CADBE1ECC660100469A73 /* IDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDController.swift; sourceTree = "<group>"; };
 		7DE770ED1EC9ADCC00F75CAB /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE770F21EC9ADCC00F75CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				7DE770FF1EC9ADCC00F75CAB /* Info.plist */,
 				7DE770F71EC9ADCC00F75CAB /* CryptoApp.xcdatamodeld */,
 				7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */,
+				7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */,
+				7D4CADBE1ECC660100469A73 /* IDController.swift */,
 			);
 			path = CryptoApp;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 			files = (
 				7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */,
 				7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */,
+				7D4CADBF1ECC660100469A73 /* IDController.swift in Sources */,
+				7D4CADBD1ECC3E6B00469A73 /* ConnexionController.swift in Sources */,
 				7DE770F91EC9ADCC00F75CAB /* CryptoApp.xcdatamodeld in Sources */,
 				7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */,
 			);
