@@ -33,7 +33,7 @@ class RegisterController: UIViewController {
                 AsymmetricCryptoManager.sharedInstance.createSecureKeyPair({ (success, error) -> Void in
                     if success {
                         print("RSA-2048 keypair successfully generated.")
-                        let publicKey = AsymmetricCryptoManager.sharedInstance.getPublicKeyReference();
+                        let publicKey = AsymmetricCryptoManager.sharedInstance.getPublicKeyData();
                         print(publicKey!)
                     } else {
                         print("An error happened while generating a keypair: \(error)")
