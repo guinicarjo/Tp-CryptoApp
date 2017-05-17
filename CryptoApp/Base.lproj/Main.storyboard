@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="4209" y="24"/>
         </scene>
-        <!--View Controller-->
+        <!--Connexion Controller-->
         <scene sceneID="Dng-Ym-Fwa">
             <objects>
-                <viewController id="YNT-Wz-vwV" sceneMemberID="viewController">
+                <viewController id="YNT-Wz-vwV" customClass="ConnexionController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o4H-2M-Yfm"/>
                         <viewControllerLayoutGuide type="bottom" id="Lxf-Rn-YfF"/>
@@ -376,6 +376,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="btnLoging2:" destination="YNT-Wz-vwV" eventType="touchUpInside" id="eLf-jb-e5s"/>
                                                     <segue destination="DOE-8P-7l6" kind="show" id="Kag-dX-QpS"/>
                                                 </connections>
                                             </button>
@@ -448,6 +449,10 @@
                             <constraint firstItem="jOU-wI-AEp" firstAttribute="leading" secondItem="2SU-wC-uDP" secondAttribute="leading" id="zjr-MO-vsM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mdpLabel" destination="E6x-CD-60Z" id="HCx-v3-obU"/>
+                        <outlet property="nameLabel" destination="kzX-Np-ZEB" id="bjB-qr-GNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkC-We-P19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -915,6 +920,6 @@
         <image name="logo-white" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mNp-x7-1b0"/>
+        <segue reference="gQt-GF-KVA"/>
     </inferredMetricsTieBreakers>
 </document>
