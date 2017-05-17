@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="5263" y="-309"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Message Controller-->
         <scene sceneID="wbI-n3-ils">
             <objects>
-                <viewController id="lJN-3C-gQh" sceneMemberID="viewController">
+                <viewController id="lJN-3C-gQh" customClass="CreateMessageController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e9l-xa-sNe"/>
                         <viewControllerLayoutGuide type="bottom" id="UZy-m7-Ynp"/>
@@ -284,6 +284,9 @@
                                 <rect key="frame" x="160" y="543" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Envoyer"/>
+                                <connections>
+                                    <action selector="submit:" destination="lJN-3C-gQh" eventType="touchUpInside" id="xBh-3m-GRs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID de votre contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-2A-J1w">
                                 <rect key="frame" x="114" y="148" width="146" height="21"/>
@@ -302,6 +305,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="contactIdField" destination="Ylg-Wm-xjl" id="KUM-U7-aom"/>
+                        <outlet property="messageText" destination="6vu-Wp-nAb" id="IYM-aa-FjA"/>
+                        <outlet property="submitButton" destination="Znb-pa-Iqd" id="G3f-x8-hvR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNC-Kl-y4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

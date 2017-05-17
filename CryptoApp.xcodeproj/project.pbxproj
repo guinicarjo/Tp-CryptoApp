@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */; };
+		7DAA1A491ECC3E30008CBB01 /* CreateMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */; };
 		7DE5FBB31ECB2B68004DFD63 /* AsymmetricCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */; };
 		7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F01EC9ADCC00F75CAB /* AppDelegate.swift */; };
 		7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE770F21EC9ADCC00F75CAB /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageController.swift; sourceTree = "<group>"; };
 		7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsymmetricCryptoManager.swift; sourceTree = "<group>"; };
 		7DE5FBB41ECB2B95004DFD63 /* CryptoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7DE770ED1EC9ADCC00F75CAB /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */,
 				7DE5FBB21ECB2B68004DFD63 /* AsymmetricCryptoManager.swift */,
 				7DE5FBB41ECB2B95004DFD63 /* CryptoApp-Bridging-Header.h */,
+				7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */,
 			);
 			path = CryptoApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				7DE770F91EC9ADCC00F75CAB /* CryptoApp.xcdatamodeld in Sources */,
 				7DE770F11EC9ADCC00F75CAB /* AppDelegate.swift in Sources */,
 				7DE5FBB31ECB2B68004DFD63 /* AsymmetricCryptoManager.swift in Sources */,
+				7DAA1A491ECC3E30008CBB01 /* CreateMessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
