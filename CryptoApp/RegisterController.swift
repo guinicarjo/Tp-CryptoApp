@@ -11,6 +11,7 @@ import CoreData
 
 class RegisterController: UIViewController {
     let userDefaults = UserDefaults.standard
+    var b64encoded:String = ""
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var btn_register: UIButton!
     @IBOutlet weak var password_confirmation: UITextField!
@@ -27,35 +28,31 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func btnRegister(_ sender: UIButton) {
+        
         if ( password.text == password_confirmation.text){
+            print("yaya")
             if(password.text != nil){
+                print("ballon")
                 //print("\(String(describing: password.text))")
                 
                 // Generate key pair
                 AsymmetricCryptoManager.sharedInstance.createSecureKeyPair({ (success, error) -> Void in
                     if success {
-                        print("RSA-2048 keypair successfully generated.")
-                        //let publicKeyRef = AsymmetricCryptoManager.sharedInstance.getPublicKeyReference();
                         let publicKeyData = AsymmetricCryptoManager.sharedInstance.getPublicKeyData();
-                        let b64encoded = publicKeyData!.base64EncodedString(options: [])
+                        self.b64encoded = publicKeyData!.base64EncodedString(options: [])
                         // Push to database here
-                        
-                        //print(publicKeyRef!)
-
+                        self.APIRequest()
                     } else {
                         print("An error happened while generating a keypair: \(error)")
                     }
                 })
-                print("\(String(describing: password.text))")
-                APIRequest()
+                
             }
         }
     }
     
     
     func APIRequest() {
-        
-        
         let todosEndpoint: String = "http://192.168.33.10:8080/api/signup"
         
         guard let todosURL = URL(string: todosEndpoint) else {
@@ -64,8 +61,8 @@ class RegisterController: UIViewController {
         }
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
-        let postString = "password=\(self.password.text!)"
-        
+        let postString = "password=\(self.password.text!)&publicKey=\(self.b64encoded)"
+        print(postString)
         todosUrlRequest.httpBody = postString.data(using: .utf8)
         
         

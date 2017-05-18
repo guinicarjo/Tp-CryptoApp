@@ -44,6 +44,7 @@ class AsymmetricCryptoManager: NSObject {
     // MARK: - Manage keys
     
     func createSecureKeyPair(_ completion: ((_ success: Bool, _ error: AsymmetricCryptoException?) -> Void)? = nil) {
+        print("hello fonction")
         // private key parameters
         let privateKeyParams: [String: AnyObject] = [
             kSecAttrIsPermanent as String: true as AnyObject,
@@ -68,7 +69,7 @@ class AsymmetricCryptoManager: NSObject {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async { () -> Void in
             var pubKey, privKey: SecKey?
             let status = SecKeyGeneratePair(parameters as CFDictionary, &pubKey, &privKey)
-            
+            print(status)
             if status == errSecSuccess {
                 DispatchQueue.main.async(execute: { completion?(true, nil) })
             } else {
