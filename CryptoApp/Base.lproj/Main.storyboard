@@ -334,13 +334,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="jOU-wI-AEp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="jOU-wI-AEp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-GM-2ke">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-GM-2ke">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crypto Messenger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-M9-9Gz">
                                         <rect key="frame" x="62" y="0.0" width="148" height="44"/>
@@ -397,6 +395,16 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QLd-GM-2ke" firstAttribute="leading" secondItem="2SU-wC-uDP" secondAttribute="leading" id="FYU-f7-Qji"/>
+                            <constraint firstItem="jOU-wI-AEp" firstAttribute="top" secondItem="2SU-wC-uDP" secondAttribute="top" id="OH6-2z-47A"/>
+                            <constraint firstAttribute="trailing" secondItem="QLd-GM-2ke" secondAttribute="trailing" id="Vhw-oZ-FM4"/>
+                            <constraint firstItem="jOU-wI-AEp" firstAttribute="leading" secondItem="2SU-wC-uDP" secondAttribute="leading" id="VkH-aV-TzV"/>
+                            <constraint firstItem="mC2-LK-7i0" firstAttribute="top" secondItem="QLd-GM-2ke" secondAttribute="bottom" id="Z7E-Ou-Ufv"/>
+                            <constraint firstItem="QLd-GM-2ke" firstAttribute="top" secondItem="BPa-7G-Poh" secondAttribute="bottom" id="bia-68-Dfm"/>
+                            <constraint firstItem="mC2-LK-7i0" firstAttribute="top" secondItem="jOU-wI-AEp" secondAttribute="bottom" id="m6F-BY-OMm"/>
+                            <constraint firstAttribute="trailing" secondItem="jOU-wI-AEp" secondAttribute="trailing" id="oYX-zf-n92"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MpY-6j-hYm"/>
                     <connections>
@@ -420,9 +428,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="Xbt-0J-eck">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="Xbt-0J-eck">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-cZ-SPu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -487,6 +494,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nV2-e3-55t" firstAttribute="top" secondItem="Xbt-0J-eck" secondAttribute="bottom" id="FCE-Sw-WNN"/>
+                            <constraint firstItem="Xbt-0J-eck" firstAttribute="top" secondItem="qC5-A1-KQz" secondAttribute="top" id="itu-Dr-0yH"/>
+                            <constraint firstItem="Xbt-0J-eck" firstAttribute="leading" secondItem="qC5-A1-KQz" secondAttribute="leading" id="qQK-fX-zq3"/>
+                            <constraint firstAttribute="trailing" secondItem="Xbt-0J-eck" secondAttribute="trailing" id="yYb-Jh-VMF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hrd-uS-byp"/>
                 </viewController>
@@ -506,9 +519,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="CM8-da-nRk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="CM8-da-nRk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSl-Na-2Wr">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -592,6 +604,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CM8-da-nRk" secondAttribute="trailing" id="aAW-9d-gbs"/>
+                            <constraint firstItem="CM8-da-nRk" firstAttribute="top" secondItem="L4O-zO-33B" secondAttribute="top" id="k2N-oQ-0LR"/>
+                            <constraint firstItem="CM8-da-nRk" firstAttribute="leading" secondItem="L4O-zO-33B" secondAttribute="leading" id="kLs-Ur-mwO"/>
+                            <constraint firstItem="0Z4-QS-0ly" firstAttribute="top" secondItem="CM8-da-nRk" secondAttribute="bottom" id="o9F-44-ZMI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qft-l0-8zV"/>
                 </viewController>
@@ -611,13 +629,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="d3w-EO-CMr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="d3w-EO-CMr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OpJ-8S-TIm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpJ-8S-TIm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crypto Messenger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URf-rC-fNM">
                                         <rect key="frame" x="62" y="0.0" width="148" height="44"/>
@@ -681,6 +697,16 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OpJ-8S-TIm" firstAttribute="leading" secondItem="TPf-JR-Kgu" secondAttribute="leading" id="ATQ-7J-Cdh"/>
+                            <constraint firstItem="d3w-EO-CMr" firstAttribute="leading" secondItem="TPf-JR-Kgu" secondAttribute="leading" id="NVo-mD-Ji4"/>
+                            <constraint firstItem="d3w-EO-CMr" firstAttribute="top" secondItem="TPf-JR-Kgu" secondAttribute="top" id="NWn-ZP-dq7"/>
+                            <constraint firstItem="IGH-GA-awj" firstAttribute="top" secondItem="OpJ-8S-TIm" secondAttribute="bottom" id="Qg6-Ae-aCP"/>
+                            <constraint firstItem="OpJ-8S-TIm" firstAttribute="top" secondItem="a3A-hk-7tb" secondAttribute="bottom" id="VcP-eu-hdu"/>
+                            <constraint firstItem="IGH-GA-awj" firstAttribute="top" secondItem="d3w-EO-CMr" secondAttribute="bottom" id="Yt6-aA-ojB"/>
+                            <constraint firstAttribute="trailing" secondItem="d3w-EO-CMr" secondAttribute="trailing" id="sk8-Ch-0GY"/>
+                            <constraint firstAttribute="trailing" secondItem="OpJ-8S-TIm" secondAttribute="trailing" id="x0i-iG-ku5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="abV-TH-G7O"/>
                     <connections>
@@ -705,9 +731,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="Gv0-MQ-ndP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-cube" translatesAutoresizingMaskIntoConstraints="NO" id="Gv0-MQ-ndP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCI-cR-0yx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -761,6 +786,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gv0-MQ-ndP" firstAttribute="leading" secondItem="43Z-9K-SiN" secondAttribute="leading" id="3zc-OO-Mei"/>
+                            <constraint firstItem="Gv0-MQ-ndP" firstAttribute="top" secondItem="43Z-9K-SiN" secondAttribute="top" id="4ce-bC-j5s"/>
+                            <constraint firstItem="fjO-kU-IsC" firstAttribute="top" secondItem="Gv0-MQ-ndP" secondAttribute="bottom" id="LYg-GD-3tf"/>
+                            <constraint firstAttribute="trailing" secondItem="Gv0-MQ-ndP" secondAttribute="trailing" id="ebv-fI-3Wq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kNi-Nw-Gya"/>
                     <connections>
