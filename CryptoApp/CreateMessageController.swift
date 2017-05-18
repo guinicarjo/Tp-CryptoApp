@@ -26,7 +26,8 @@ class CreateMessageController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submit(_ sender: Any) {
+    @IBAction func submit(_ sender: UIButton) {
+        print("\(userDefaults.value(forKey: "token") as? String)")
         let text = messageText.text!
         let dest = contactIdField.text!
         var cypheredText=""
@@ -35,10 +36,11 @@ class CreateMessageController: UIViewController {
                 let b64encoded = data!.base64EncodedString(options: [])
                 cypheredText = b64encoded
                 self.messageText.text = cypheredText
+                self.APIRequest(dest: dest,cypheredText: cypheredText);
                 guard let encryptedData = Data(base64Encoded: cypheredText, options: [])
                     else
                 {
-                    self.APIRequest(dest: dest,cypheredText: cypheredText);
+                    
                     return
                 }
             }else{
@@ -57,10 +59,10 @@ class CreateMessageController: UIViewController {
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
         let postString = "dest=\(dest)&message=\(cypheredText)"
-        print(postString)
         todosUrlRequest.httpBody = postString.data(using: .utf8)
-        todosUrlRequest.value(forHTTPHeaderField: "\(UserDefaults.value(forKey: "token") as! String)")
-        
+               todosUrlRequest.setValue("\(userDefaults.value(forKey: "token") as! String)", forHTTPHeaderField: "Authorization")
+        todosUrlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        print("\(cypheredText)")
         
         let session = URLSession.shared
         
@@ -85,19 +87,18 @@ class CreateMessageController: UIViewController {
                 }
                 print("The todo is: " + receivedTodo.description)
                 
-                guard let name = receivedTodo["name"] as? String else {
-                    print("Could not get token as string from JSON")
+                guard let msg = receivedTodo["msg"] as? String else {
+                    print("Could not get msg as string from JSON")
                     return
                 }
                 guard let success = receivedTodo["success"] as? Bool else {
                     print("Could not get success as bool from JSON")
                     return
                 }
-                self.userDefaults.set("\(name)", forKey: "name")
+                self.userDefaults.set("\(msg)", forKey: "msg")
                 self.userDefaults.set("\(success)", forKey: "success")
                 
-                print("\(name)")
-                print("\(self.userDefaults.value(forKey: "success"))")
+                
                 
                 
             } catch  {
@@ -106,7 +107,8 @@ class CreateMessageController: UIViewController {
             }
         }
         task.resume()
-    }    /*
+    }
+       /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

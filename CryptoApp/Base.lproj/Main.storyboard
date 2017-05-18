@@ -301,7 +301,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Envoyer"/>
                                                 <connections>
-                                                    <action selector="submit:" destination="lJN-3C-gQh" eventType="touchUpInside" id="xBh-3m-GRs"/>
+                                                    <action selector="submit:" destination="lJN-3C-gQh" eventType="touchUpInside" id="hKR-1q-ltX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -345,7 +345,6 @@
                     <connections>
                         <outlet property="contactIdField" destination="Ylg-Wm-xjl" id="KUM-U7-aom"/>
                         <outlet property="messageText" destination="6vu-Wp-nAb" id="IYM-aa-FjA"/>
-                        <outlet property="submitButton" destination="Znb-pa-Iqd" id="G3f-x8-hvR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNC-Kl-y4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
