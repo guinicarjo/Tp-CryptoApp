@@ -74,6 +74,7 @@ class ConnexionController: UIViewController {
                 self.userDefaults.set("\(token)", forKey: "token")
                 print("The token is: \(token)")
                 self.userDefaults.set("\(token)", forKey: "token")
+                self.LoadPage()
             } catch  {
                 print("error parsing response from POST on /todos")
                 return
@@ -81,7 +82,12 @@ class ConnexionController: UIViewController {
         }
         task.resume()
     }
-
+    func LoadPage(){
+        DispatchQueue.main.async {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableauBordController") as! TableauBordController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
+    }
     /*
     // MARK: - Navigation
 

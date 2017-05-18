@@ -11,6 +11,7 @@ import CoreData
 
 class RegisterController: UIViewController {
     let userDefaults = UserDefaults.standard
+    var b64encoded:String = "mot"
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var btn_register: UIButton!
     @IBOutlet weak var password_confirmation: UITextField!
@@ -37,9 +38,10 @@ class RegisterController: UIViewController {
                         print("RSA-2048 keypair successfully generated.")
                         //let publicKeyRef = AsymmetricCryptoManager.sharedInstance.getPublicKeyReference();
                         let publicKeyData = AsymmetricCryptoManager.sharedInstance.getPublicKeyData();
-                        let b64encoded = publicKeyData!.base64EncodedString(options: [])
-                        // Push to database here
+                        self.b64encoded = publicKeyData!.base64EncodedString(options: [])
                         
+                        // Push to database here
+                        self.APIRequest()
                         //print(publicKeyRef!)
 
                     } else {
@@ -47,15 +49,19 @@ class RegisterController: UIViewController {
                     }
                 })
                 print("\(String(describing: password.text))")
-                APIRequest()
+                
             }
         }
+        
     }
     
     
     func APIRequest() {
-        
-        
+        btn_register.isHidden = true
+        DispatchQueue.main.async {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "IDController") as! IDController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
         let todosEndpoint: String = "http://192.168.33.10:8080/api/signup"
         
         guard let todosURL = URL(string: todosEndpoint) else {
@@ -64,8 +70,8 @@ class RegisterController: UIViewController {
         }
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
-        let postString = "password=\(self.password.text!)"
-        
+        let postString = "password=\(self.password.text!)&publickey=\(self.b64encoded)"
+        print("\(postString)")
         todosUrlRequest.httpBody = postString.data(using: .utf8)
         
         
@@ -105,6 +111,8 @@ class RegisterController: UIViewController {
                 
                 print("\(name)")
                 print("\(self.userDefaults.value(forKey: "success"))")
+                
+                
             
 
             } catch  {

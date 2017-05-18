@@ -353,10 +353,14 @@
             </objects>
             <point key="canvasLocation" x="1123.5" y="39.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Tableau Bord Controller-->
         <scene sceneID="HR3-r4-cmV">
             <objects>
-                <viewController id="DOE-8P-7l6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableauBordController" id="DOE-8P-7l6" customClass="TableauBordController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kwh-Oa-Ubb"/>
+                        <viewControllerLayoutGuide type="bottom" id="jhW-SR-auq"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qC5-A1-KQz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,7 +634,11 @@
         <!--Controller-->
         <scene sceneID="X98-Gi-arY">
             <objects>
-                <viewController id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDController" id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dd4-5b-OjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="SjS-Ae-SFC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="43Z-9K-SiN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

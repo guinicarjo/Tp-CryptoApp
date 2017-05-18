@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D08EA2C1ECD7C75007DF885 /* TableauBordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08EA2B1ECD7C73007DF885 /* TableauBordController.swift */; };
 		7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */; };
 		7D4CADBD1ECC3E6B00469A73 /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */; };
 		7D4CADBF1ECC660100469A73 /* IDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CADBE1ECC660100469A73 /* IDController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D08EA2B1ECD7C73007DF885 /* TableauBordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableauBordController.swift; sourceTree = "<group>"; };
 		7D4CADBA1ECAFB8500469A73 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
 		7D4CADBE1ECC660100469A73 /* IDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				7DAA1A481ECC3E30008CBB01 /* CreateMessageController.swift */,
 				7D4CADBC1ECC3E6B00469A73 /* ConnexionController.swift */,
 				7D4CADBE1ECC660100469A73 /* IDController.swift */,
+				7D08EA2B1ECD7C73007DF885 /* TableauBordController.swift */,
 			);
 			path = CryptoApp;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4CADBB1ECAFB8500469A73 /* RegisterController.swift in Sources */,
+				7D08EA2C1ECD7C75007DF885 /* TableauBordController.swift in Sources */,
 				7DE770F31EC9ADCC00F75CAB /* ViewController.swift in Sources */,
 				7D4CADBF1ECC660100469A73 /* IDController.swift in Sources */,
 				7D4CADBD1ECC3E6B00469A73 /* ConnexionController.swift in Sources */,
