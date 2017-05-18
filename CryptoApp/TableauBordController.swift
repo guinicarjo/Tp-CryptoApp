@@ -1,26 +1,16 @@
 //
-//  IDController.swift
+//  TableauBordController.swift
 //  CryptoApp
 //
-//  Created by stagiaire on 17/05/2017.
+//  Created by stagiaire on 18/05/2017.
 //  Copyright © 2017 guinicarji. All rights reserved.
 //
 
 import UIKit
-import CoreData
-class IDController: UIViewController {
-    @IBOutlet weak var idLabel: UILabel!
-    let userDefaults = UserDefaults.standard
+
+class TableauBordController: UIViewController {
+
     override func viewDidLoad() {
-        var mavar = 0;
-        print("test")
-        while(mavar == 0 ){
-            if(userDefaults.value(forKey: "success") as! String == "true"){
-                idLabel.text = "\(userDefaults.value(forKey: "name") as! String)"
-                mavar = 1
-            }
-        }
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

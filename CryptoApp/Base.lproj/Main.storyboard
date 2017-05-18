@@ -377,7 +377,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnLoging2:" destination="YNT-Wz-vwV" eventType="touchUpInside" id="eLf-jb-e5s"/>
-                                                    <segue destination="DOE-8P-7l6" kind="show" id="Kag-dX-QpS"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre ID" textAlignment="natural" minimumFontSize="17" background="background_app" translatesAutoresizingMaskIntoConstraints="NO" id="kzX-Np-ZEB">
@@ -458,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="1797.5999999999999" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Tableau Bord Controller-->
         <scene sceneID="HR3-r4-cmV">
             <objects>
-                <viewController id="DOE-8P-7l6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableauBordController" id="DOE-8P-7l6" customClass="TableauBordController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kwh-Oa-Ubb"/>
                         <viewControllerLayoutGuide type="bottom" id="jhW-SR-auq"/>
@@ -474,7 +473,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-cZ-SPu">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Messenger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwy-hz-5Mp">
                                         <rect key="frame" x="62" y="0.0" width="148" height="44"/>
@@ -492,10 +491,10 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9I-iu-0TF">
-                                        <rect key="frame" x="67" y="149" width="240" height="304"/>
+                                        <rect key="frame" x="67" y="149" width="240" height="348"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-SE-6Pm">
-                                                <rect key="frame" x="0.0" y="168" width="240" height="66"/>
+                                                <rect key="frame" x="0.0" y="212" width="240" height="66"/>
                                                 <color key="backgroundColor" red="0.38732023340587318" green="1" blue="0.60789917471888366" alpha="0.80013912671232879" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="mPI-fH-t6j"/>
@@ -506,13 +505,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tableau de bord" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-pP-jVO">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="92"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="241" height="136"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU8-aQ-AsK">
-                                                <rect key="frame" x="1" y="100" width="240" height="68"/>
+                                                <rect key="frame" x="1" y="144" width="240" height="68"/>
                                                 <color key="backgroundColor" red="1" green="0.7473692066934654" blue="0.60736450532077424" alpha="0.80013912671232879" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="68" id="plP-ej-kUL"/>
@@ -520,7 +519,7 @@
                                                 <state key="normal" title="Contatcs"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfn-TH-Iyg">
-                                                <rect key="frame" x="0.0" y="233" width="241" height="71"/>
+                                                <rect key="frame" x="0.0" y="277" width="241" height="71"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Paramètres"/>
                                                 <connections>
@@ -699,7 +698,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnRegister:" destination="zSj-xq-5d4" eventType="touchUpInside" id="Kzd-aP-iPh"/>
-                                                    <segue destination="BgB-dD-F1R" kind="show" id="U4i-SB-sMj"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Djk-7W-IcV">
@@ -782,7 +780,7 @@
         <!--Controller-->
         <scene sceneID="X98-Gi-arY">
             <objects>
-                <viewController id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDController" id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dd4-5b-OjH"/>
                         <viewControllerLayoutGuide type="bottom" id="SjS-Ae-SFC"/>
