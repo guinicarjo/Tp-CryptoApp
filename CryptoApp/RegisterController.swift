@@ -10,10 +10,12 @@ import UIKit
 import CoreData
 
 class RegisterController: UIViewController {
+    @IBOutlet weak var btn_register: UIButton!
     let userDefaults = UserDefaults.standard
+
     var b64encoded:String = ""
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var btn_register: UIButton!
+    
     @IBOutlet weak var password_confirmation: UITextField!
     override func viewDidLoad() {
         
@@ -40,6 +42,7 @@ class RegisterController: UIViewController {
                     if success {
                         let publicKeyData = AsymmetricCryptoManager.sharedInstance.getPublicKeyData();
                         self.b64encoded = publicKeyData!.base64EncodedString(options: [])
+
                         // Push to database here
                         self.APIRequest()
                     } else {
@@ -49,10 +52,17 @@ class RegisterController: UIViewController {
                 
             }
         }
+        
     }
     
     
     func APIRequest() {
+
+        btn_register.isHidden = true
+        DispatchQueue.main.async {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "IDController") as! IDController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
         let todosEndpoint: String = "http://192.168.33.10:8080/api/signup"
         
         guard let todosURL = URL(string: todosEndpoint) else {
@@ -61,8 +71,9 @@ class RegisterController: UIViewController {
         }
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
-        let postString = "password=\(self.password.text!)&publicKey=\(self.b64encoded)"
-        print(postString)
+
+        let postString = "password=\(self.password.text!)&publickey=\(self.b64encoded)"
+        print("\(postString)")
         todosUrlRequest.httpBody = postString.data(using: .utf8)
         
         
@@ -102,6 +113,8 @@ class RegisterController: UIViewController {
                 
                 print("\(name)")
                 print("\(self.userDefaults.value(forKey: "success"))")
+                
+                
             
 
             } catch  {

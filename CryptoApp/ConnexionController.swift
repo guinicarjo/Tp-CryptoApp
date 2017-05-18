@@ -10,15 +10,15 @@ import UIKit
 import CoreData
 
 class ConnexionController: UIViewController {
-    @IBOutlet weak var nameLabel: UITextField!
     let userDefaults = UserDefaults.standard
-    @IBAction func btnLoging(_ sender: UIButton) {
-APIRequest()
-
-    }
     @IBOutlet weak var mdpLabel: UITextField!
+    @IBOutlet weak var nameLabel: UITextField!
+    @IBAction func btnLoging2(_ sender: UIButton) {
+        
+        APIRequest()
+    }
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -73,6 +73,8 @@ APIRequest()
                 }
                 self.userDefaults.set("\(token)", forKey: "token")
                 print("The token is: \(token)")
+                self.userDefaults.set("\(token)", forKey: "token")
+                self.LoadPage()
             } catch  {
                 print("error parsing response from POST on /todos")
                 return
@@ -80,7 +82,12 @@ APIRequest()
         }
         task.resume()
     }
-
+    func LoadPage(){
+        DispatchQueue.main.async {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableauBordController") as! TableauBordController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
+    }
     /*
     // MARK: - Navigation
 
