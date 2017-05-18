@@ -310,7 +310,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnLoging2:" destination="YNT-Wz-vwV" eventType="touchUpInside" id="eLf-jb-e5s"/>
-                                                    <segue destination="DOE-8P-7l6" kind="push" id="Kag-dX-QpS"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page de connexion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LSI-Oz-Y4w">
@@ -357,10 +356,6 @@
         <scene sceneID="HR3-r4-cmV">
             <objects>
                 <viewController storyboardIdentifier="TableauBordController" id="DOE-8P-7l6" customClass="TableauBordController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kwh-Oa-Ubb"/>
-                        <viewControllerLayoutGuide type="bottom" id="jhW-SR-auq"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qC5-A1-KQz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -587,7 +582,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnRegister:" destination="zSj-xq-5d4" eventType="touchUpInside" id="Kzd-aP-iPh"/>
-                                                    <segue destination="BgB-dD-F1R" kind="push" id="U4i-SB-sMj"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" id="Djk-7W-IcV">
@@ -622,7 +616,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="abV-TH-G7O"/>
                     <connections>
-                        <outlet property="btn_register" destination="8qo-la-bBJ" id="OwV-k3-NWC"/>
+                        <outlet property="btn_register" destination="8qo-la-bBJ" id="xDG-Oq-rFM"/>
                         <outlet property="password" destination="Djk-7W-IcV" id="Sn2-lM-OI9"/>
                         <outlet property="password_confirmation" destination="0R6-7E-K3f" id="Qbq-mk-xnC"/>
                     </connections>
@@ -635,10 +629,6 @@
         <scene sceneID="X98-Gi-arY">
             <objects>
                 <viewController storyboardIdentifier="IDController" id="BgB-dD-F1R" customClass="IDController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dd4-5b-OjH"/>
-                        <viewControllerLayoutGuide type="bottom" id="SjS-Ae-SFC"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="43Z-9K-SiN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

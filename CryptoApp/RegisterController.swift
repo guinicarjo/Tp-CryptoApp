@@ -10,10 +10,11 @@ import UIKit
 import CoreData
 
 class RegisterController: UIViewController {
+    @IBOutlet weak var btn_register: UIButton!
     let userDefaults = UserDefaults.standard
     var b64encoded:String = "mot"
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var btn_register: UIButton!
+    
     @IBOutlet weak var password_confirmation: UITextField!
     override func viewDidLoad() {
         
