@@ -1,6 +1,6 @@
 # Tp CryptoApp
 
-### Fonctionnalités
+### Fonctionnalités opérationnelles
 - Ouverture par reconnaissance d'empreinte digitale si appareil compatible
 - Inscription et attribution d'un identifiant unique aléatoire
 - Envoi de message chiffré à un utilisateur avec la fonction native "SecKeyEncrypt"
