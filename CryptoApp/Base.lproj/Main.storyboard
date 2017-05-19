@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="633.5" y="39.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Receive Message Controller-->
         <scene sceneID="EIZ-tV-U2z">
             <objects>
-                <viewController id="uQe-BU-wNl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiveMessageController" id="uQe-BU-wNl" customClass="ReceiveMessageController" customModule="CryptoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="55a-fL-mK2"/>
                         <viewControllerLayoutGuide type="bottom" id="rlb-n3-0Fn"/>
@@ -219,6 +219,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xWc-I0-Src"/>
+                    <connections>
+                        <outlet property="messageReceiveLabel" destination="san-Ye-3Uf" id="d32-bT-5zp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIN-UC-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1031,7 +1034,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSb-n6-uEG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xsb-DW-hBR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xsb-DW-hBR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

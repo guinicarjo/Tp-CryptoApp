@@ -12,7 +12,7 @@ import CoreData
 class RegisterController: UIViewController {
     @IBOutlet weak var btn_register: UIButton!
     let userDefaults = UserDefaults.standard
-    let b64Key:String = ""
+    var b64Key:String = ""
     var b64encoded:String = ""
     @IBOutlet weak var password: UITextField!
     
@@ -32,9 +32,9 @@ class RegisterController: UIViewController {
     @IBAction func btnRegister(_ sender: UIButton) {
         
         if ( password.text == password_confirmation.text){
-            print("yaya")
+
             if(password.text != nil){
-                print("ballon")
+        
                 //print("\(String(describing: password.text))")
                 
                 // Generate key pair
@@ -45,7 +45,9 @@ class RegisterController: UIViewController {
                         var error:Unmanaged<CFError>?
                         if let cfdata = SecKeyCopyExternalRepresentation(publicKeyRef!, &error) {
                             let data:Data = cfdata as Data
-                            let b64Key = data.base64EncodedString()
+                            self.b64Key = data.base64EncodedString()
+                            print("public key : ")
+                            print("\(self.b64Key)")
                         }
                         
                         

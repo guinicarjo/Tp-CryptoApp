@@ -176,6 +176,39 @@ class AsymmetricCryptoManager: NSObject {
         }
     }
     
+    func customEncryptMessageWithPublicKey(_ message: String,publickey: SecKey?,  completion: @escaping (_ success: Bool, _ data: Data?, _ error: AsymmetricCryptoException?) -> Void) {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async { () -> Void in
+            
+            if let publicKeyRef = publickey {
+                // prepare input input plain text
+                guard let messageData = message.data(using: String.Encoding.utf8) else {
+                    completion(false, nil, .wrongInputDataFormat)
+                    return
+                }
+                let plainText = (messageData as NSData).bytes.bindMemory(to: UInt8.self, capacity: messageData.count)
+                let plainTextLen = messageData.count
+                print(plainText)
+                
+                // prepare output data buffer
+                var cipherData = Data(count: SecKeyGetBlockSize(publicKeyRef))
+                let cipherText = cipherData.withUnsafeMutableBytes({ (bytes: UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8> in
+                    return bytes
+                })
+                print(cipherText)
+                var cipherTextLen = cipherData.count
+                
+                let status = SecKeyEncrypt(publicKeyRef, .PKCS1, plainText, plainTextLen, cipherText, &cipherTextLen)
+                
+                // analyze results and call the completion in main thread
+                DispatchQueue.main.async(execute: { () -> Void in
+                    completion(status == errSecSuccess, cipherData, status == errSecSuccess ? nil : .unableToEncrypt)
+                    cipherText.deinitialize()
+                })
+                return
+            } else { DispatchQueue.main.async(execute: { completion(false, nil, .keyNotFound) }) }
+        }
+    }
+    
     func decryptMessageWithPrivateKey(_ encryptedData: Data, completion: @escaping (_ success: Bool, _ result: String?, _ error: AsymmetricCryptoException?) -> Void) {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async { () -> Void in
             

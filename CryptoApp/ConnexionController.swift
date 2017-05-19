@@ -16,6 +16,7 @@ class ConnexionController: UIViewController {
     @IBAction func btnLoging2(_ sender: UIButton) {
         
         APIRequest()
+        
     }
     override func viewDidLoad() {
         
@@ -71,8 +72,67 @@ class ConnexionController: UIViewController {
                     print("Could not get token as string from JSON")
                     return
                 }
+                
                 self.userDefaults.set("\(token)", forKey: "token")
                 print("The token is: \(token)")
+                self.APIRequest2()
+               
+            } catch  {
+                print("error parsing response from POST on /todos")
+                return
+            }
+        }
+        task.resume()
+    }
+    func APIRequest2() {
+        
+        
+        let todosEndpoint: String = "http://192.168.33.10:8080/api/publickey"
+        
+        guard let todosURL = URL(string: todosEndpoint) else {
+            print("Error: cannot create URL")
+            return
+        }
+        var todosUrlRequest = URLRequest(url: todosURL)
+        todosUrlRequest.httpMethod = "POST"
+        let postString = "name=\(self.nameLabel.text!)"
+        print("\(postString)")
+        todosUrlRequest.httpBody = postString.data(using: .utf8)
+        todosUrlRequest.setValue("\(userDefaults.value(forKey: "token") as! String)", forHTTPHeaderField: "Authorization")
+        todosUrlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: todosUrlRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                print("error calling POST on /todos/1")
+                print(error)
+                return
+            }
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            
+            // parse the result as JSON, since that's what the API provides
+            do {
+                guard let receivedTodo = try JSONSerialization.jsonObject(with: responseData,
+                                                                          options: []) as? [String: Any] else {
+                                                                            print("Could not get JSON from responseData as dictionary")
+                                                                            return
+                }
+                print("The todo is: " + receivedTodo.description)
+                
+             
+                guard let publickey = receivedTodo["publickey"] as? String else {
+                    print("Could not get publickey as string from JSON")
+                    return
+                }
+               
+                let newpublickeyvar2 = publickey.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+                self.userDefaults.set("\(newpublickeyvar2)", forKey: "mapublickey")
+                print("The publickey is: \(newpublickeyvar2)")
                 self.LoadPage()
             } catch  {
                 print("error parsing response from POST on /todos")
@@ -81,6 +141,7 @@ class ConnexionController: UIViewController {
         }
         task.resume()
     }
+
     func LoadPage(){
         DispatchQueue.main.async {
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableauBordController") as! TableauBordController

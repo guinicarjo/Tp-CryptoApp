@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         userDefaults.set("", forKey: "token")
         userDefaults.set("", forKey: "success")
         userDefaults.set("", forKey: "name")
+        userDefaults.set("", forKey: "mapublickey")
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
