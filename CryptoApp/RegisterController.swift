@@ -12,7 +12,7 @@ import CoreData
 class RegisterController: UIViewController {
     @IBOutlet weak var btn_register: UIButton!
     let userDefaults = UserDefaults.standard
-
+    let b64Key:String = ""
     var b64encoded:String = ""
     @IBOutlet weak var password: UITextField!
     
@@ -30,8 +30,7 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func btnRegister(_ sender: UIButton) {
-        
-        if ( password.text == password_confirmation.text){
+               if ( password.text == password_confirmation.text){
             print("yaya")
             if(password.text != nil){
                 print("ballon")
@@ -40,8 +39,19 @@ class RegisterController: UIViewController {
                 // Generate key pair
                 AsymmetricCryptoManager.sharedInstance.createSecureKeyPair({ (success, error) -> Void in
                     if success {
-                        let publicKeyData = AsymmetricCryptoManager.sharedInstance.getPublicKeyData();
-                        self.b64encoded = publicKeyData!.base64EncodedString(options: [])
+                        let publicKeyRef = AsymmetricCryptoManager.sharedInstance.getPublicKeyReference();
+                        var error:Unmanaged<CFError>?
+                        if let cfdata = SecKeyCopyExternalRepresentation(publicKeyRef!, &error) {
+                            let data:Data = cfdata as Data
+                            let b64Key = data.base64EncodedString()
+                        }
+                        print("clé 64");
+                        print(self.b64Key);
+                    
+                         //print("coucou publickeyref")
+                        //print(AsymmetricCryptoManager.sharedInstance.getPublicKeyReference()!);
+                        //print (" // fin publickeyref")
+                        //self.b64encoded = datakey.base64EncodedString(options: [])
 
                         // Push to database here
                         self.APIRequest()
@@ -72,7 +82,7 @@ class RegisterController: UIViewController {
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
 
-        let postString = "password=\(self.password.text!)&publickey=\(self.b64encoded)"
+        let postString = "password=\(self.password.text!)&publickey=\(self.b64Key)"
         print("\(postString)")
         todosUrlRequest.httpBody = postString.data(using: .utf8)
         

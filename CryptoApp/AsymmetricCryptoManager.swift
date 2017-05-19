@@ -111,6 +111,7 @@ class AsymmetricCryptoManager: NSObject {
         var ref: AnyObject?
         let status = SecItemCopyMatching(parameters as CFDictionary, &ref)
         if status == errSecSuccess { return ref as! SecKey? } else { return nil }
+
     }
     
     func getPrivateKeyReference() -> SecKey? {
