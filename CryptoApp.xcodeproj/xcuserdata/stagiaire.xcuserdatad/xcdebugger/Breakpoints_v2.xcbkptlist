@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoApp/RegisterController.swift"
-            timestampString = "516785473.195872"
+            timestampString = "516875006.929902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "APIRequest()"
             landmarkType = "7">
          </BreakpointContent>
